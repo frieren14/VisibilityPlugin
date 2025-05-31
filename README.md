@@ -1,5 +1,5 @@
 # VisibilityPlugin
-This plugin controls the visibility of players, pets and chocobos.
+Fork of https://github.com/SheepGoMeh/VisibilityPlugin with the extra option to used in instanced content.
 
 ## How to use
 Add `https://raw.githubusercontent.com/frieren14/VisibilityPlugin/master/repo.json` to custom plugin repositories
