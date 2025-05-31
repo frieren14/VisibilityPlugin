@@ -23,7 +23,7 @@ public class VisibilityConfiguration: IPluginConfiguration
 	public bool AdvancedEnabled;
 	public bool EnableContextMenu;
 	public bool ShowTargetOfTarget;
-	public bool AllowInAllTerritory;
+	public bool AllowInAllTerritory = true;
 
 	public List<VoidItem> VoidList { get; } = [];
 
