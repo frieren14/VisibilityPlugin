@@ -6,18 +6,15 @@ env:
 
 on:
   push:
+    branches:
+      - "**"
     paths-ignore:
       - .editorconfig
       - .gitattributes
-      - .github/**
       - .gitignore
       - CHANGELOG.md
       - LICENSE
       - README.md
-    branches:
-      - "**"
-    tags-ignore:
-      - '*'
   workflow_dispatch:
     inputs:
       dalamud_branch:
