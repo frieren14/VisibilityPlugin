@@ -1,11 +1,11 @@
-﻿[
+[
   {
     "Author": "frieren14",
     "Name": "VisibilityPlus",
     "Punchline": "Allows you to hide players, pets, chocobos and minions.",
     "Description": "Fork of https://github.com/SheepGoMeh/VisibilityPlugin by SheepGoMeh. Allows you to hide players, pets, chocobos and minions.\nIncludes VoidList, which is a better blacklist.\nAccessible via /pvis\nMore information available via /xlhelp",
     "InternalName": "VisibilityPlus",
-    "AssemblyVersion": "0.1",
+    "AssemblyVersion": "1.0.0.0",
     "RepoUrl": "https://github.com/frieren14/VisibilityPlugin",
     "ApplicableVersion": "any",
     "DalamudApiLevel": 12,
@@ -16,8 +16,8 @@
     "ImageUrls": [
       "https://raw.githubusercontent.com/frieren14/VisibilityPlugin/refs/heads/master/res/visibility.png"
     ],
-    "DownloadLinkInstall": "https://github.com/frieren14/VisibilityPlugin/releases/download/v0.1/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/frieren14/VisibilityPlugin/releases/download/v0.1/latest.zip",
-    "DownloadLinkTesting": "https://github.com/frieren14/VisibilityPlugin/releases/download/v0.1/latest.zip"
+    "DownloadLinkInstall": "https://github.com/frieren14/VisibilityPlugin/releases/download/1.0.0.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/frieren14/VisibilityPlugin/releases/download/1.0.0.0/latest.zip",
+    "DownloadLinkTesting": "https://github.com/frieren14/VisibilityPlugin/releases/download/1.0.0.0/latest.zip"
   }
 ]
