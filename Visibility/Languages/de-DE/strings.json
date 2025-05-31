@@ -37,6 +37,8 @@
   "OptionContextMenuTip": "Aktiviert das Kontextmenü (Rechtsklick Menü) auf einen Spielernamen im Chat",
   "OptionShowTargetOfTarget": "Show target of target",
   "OptionShowTargetOfTargetTip": "Disables hiding the target of your current target if it is hidden by your settings (Does not affect voided targets)",
+  "OptionAllowInAllTerritory": "Enable in instanced content",
+  "OptionAllowInAllTerritoryTip": "Toggles whether to hide or show other players in instanced areas. NOTE: This will affect visible combat effects, use with caution",
   "OptionRefresh": "Aktualisieren",
   "OptionAddPlayer": "Spieler hinzufügen",
   "OptionRemovePlayer": "Entfernen",

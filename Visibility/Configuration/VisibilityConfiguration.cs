@@ -23,6 +23,7 @@ public class VisibilityConfiguration: IPluginConfiguration
 	public bool AdvancedEnabled;
 	public bool EnableContextMenu;
 	public bool ShowTargetOfTarget;
+	public bool AllowInAllTerritory;
 
 	public List<VoidItem> VoidList { get; } = [];
 
@@ -74,6 +75,7 @@ public class VisibilityConfiguration: IPluginConfiguration
 		};
 
 		this.SettingDictionary[nameof(this.ShowTargetOfTarget)] = (val, toggle, _) => this.ShowTargetOfTarget.ToggleBool(val, toggle);
+		this.SettingDictionary[nameof(this.AllowInAllTerritory)] = (val,toggle, _) => this.AllowInAllTerritory.ToggleBool(val, toggle);
 
 		this.SettingDictionary[nameof(TerritoryConfig.HidePet)] = (val, toggle, edit) =>
 		{

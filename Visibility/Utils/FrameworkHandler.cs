@@ -234,7 +234,7 @@ public class FrameworkHandler: IDisposable
 		}
 
 		if (isBound && !VisibilityPlugin.Instance.Configuration.TerritoryTypeWhitelist.Contains(
-			    Service.ClientState.TerritoryType))
+			    Service.ClientState.TerritoryType) && !VisibilityPlugin.Instance.Configuration.AllowInAllTerritory)
 		{
 			return;
 		}

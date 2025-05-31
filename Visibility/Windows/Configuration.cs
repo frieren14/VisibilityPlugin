@@ -190,25 +190,9 @@ public class Configuration: Window
 
 			ImGui.EndTable();
 		}
-
-		ImGuiElements.Checkbox(configuration.HideStar, nameof(configuration.HideStar));
-		ImGui.SameLine();
-		ImGui.Text(VisibilityPlugin.Instance.PluginLocalization.OptionEarthlyStar);
-		if (ImGui.IsItemHovered())
-		{
-			ImGui.SetTooltip(VisibilityPlugin.Instance.PluginLocalization.OptionEarthlyStarTip);
-		}
-
+		
 		ImGui.NextColumn();
-		ImGuiElements.Checkbox(configuration.AdvancedEnabled, nameof(configuration.AdvancedEnabled));
-		ImGui.SameLine();
-		ImGui.Text(VisibilityPlugin.Instance.PluginLocalization.AdvancedOption);
-		if (ImGui.IsItemHovered())
-		{
-			ImGui.SetTooltip(VisibilityPlugin.Instance.PluginLocalization.AdvancedOptionTooltip);
-		}
 
-		ImGui.NextColumn();
 		float comboWidth =
 			(ImGui.CalcTextSize(
 					VisibilityPlugin.Instance.PluginLocalization.GetString(
@@ -216,12 +200,11 @@ public class Configuration: Window
 						Localization.Language.English))
 				.X * 2) +
 			(ImGui.GetStyle().ItemSpacing.X * ImGui.GetIO().FontGlobalScale);
-		ImGui.SameLine(
-			(ImGui.GetContentRegionMax().X / 2) -
-			ImGui.CalcTextSize(VisibilityPlugin.Instance.PluginLocalization.OptionLanguage).X - comboWidth);
+
 		ImGui.Text(VisibilityPlugin.Instance.PluginLocalization.OptionLanguage);
 		ImGui.SameLine();
 		ImGui.PushItemWidth(comboWidth);
+
 		if (ImGui.BeginCombo("###language", VisibilityPlugin.Instance.PluginLocalization.LanguageName))
 		{
 			foreach (Localization.Language language in VisibilityPlugin.Instance.PluginLocalization.AvailableLanguages
@@ -236,6 +219,24 @@ public class Configuration: Window
 			}
 
 			ImGui.EndCombo();
+		}
+
+		ImGuiElements.Checkbox(configuration.HideStar, nameof(configuration.HideStar));
+		ImGui.SameLine();
+		ImGui.Text(VisibilityPlugin.Instance.PluginLocalization.OptionEarthlyStar);
+		if (ImGui.IsItemHovered())
+		{
+			ImGui.SetTooltip(VisibilityPlugin.Instance.PluginLocalization.OptionEarthlyStarTip);
+		}
+
+		ImGui.NextColumn();
+		ImGuiElements.Checkbox(configuration.AdvancedEnabled, nameof(configuration.AdvancedEnabled));
+		ImGui.SameLine();
+		ImGui.Text(VisibilityPlugin.Instance.PluginLocalization.AdvancedOption);
+
+		if (ImGui.IsItemHovered())
+		{
+			ImGui.SetTooltip(VisibilityPlugin.Instance.PluginLocalization.AdvancedOptionTooltip);
 		}
 
 		ImGui.PopItemWidth();
@@ -258,8 +259,17 @@ public class Configuration: Window
 			ImGui.SetTooltip(VisibilityPlugin.Instance.PluginLocalization.OptionShowTargetOfTargetTip);
 		}
 		ImGui.NextColumn();
+		
+		ImGuiElements.Checkbox(configuration.AllowInAllTerritory, nameof(configuration.AllowInAllTerritory));
+		ImGui.SameLine();
+		ImGui.Text(VisibilityPlugin.Instance.PluginLocalization.OptionAllowInAllTerritory);
+		if (ImGui.IsItemHovered())
+		{
+			ImGui.SetTooltip(VisibilityPlugin.Instance.PluginLocalization.OptionAllowInAllTerritoryTip);
+		}
+		ImGui.NextColumn();
 		ImGui.Separator();
-
+		
 		ImGui.SetCursorPosY(ImGui.GetCursorPosY() + ImGui.GetStyle().ItemSpacing.Y);
 
 		if (ImGui.Button(VisibilityPlugin.Instance.PluginLocalization.OptionRefresh))

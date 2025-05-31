@@ -37,6 +37,8 @@
   "OptionContextMenuTip": "Enables context menu (Right-Click menu) on a player name in chat",
   "OptionShowTargetOfTarget": "Show target of target",
   "OptionShowTargetOfTargetTip": "Disables hiding the target of your current target if it is hidden by your settings (Does not affect voided targets)",
+  "OptionAllowInAllTerritory": "Enable in instanced content", 
+  "OptionAllowInAllTerritoryTip": "Toggles whether the plugin will run in instanced content. NOTE: This affects visible combat effects, use with caution",
   "OptionRefresh": "Refresh",
   "OptionAddPlayer": "Add player",
   "OptionRemovePlayer": "Remove",
