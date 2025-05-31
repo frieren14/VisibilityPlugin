@@ -4,12 +4,13 @@
 		<FileVersion>$(AssemblyVersion)</FileVersion>
 		<IsPackable>false</IsPackable>
 		<Authors>SheepGoMeh</Authors>
+		<AssemblyName>VisibilityPlus</AssemblyName>
 	</PropertyGroup>
 	<PropertyGroup>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<DefaultItemExcludes>$(DefaultItemExcludes);**/Properties/Resources.*</DefaultItemExcludes>
 		<SignAssembly>false</SignAssembly>
-		<RepositoryUrl>https://github.com/SheepGoMeh/VisibilityPlugin</RepositoryUrl>
+		<RepositoryUrl>https://github.com/frieren14/VisibilityPlugin</RepositoryUrl>
 		<RepositoryType>GitHub</RepositoryType>
 	</PropertyGroup>
 	<ItemGroup>
