@@ -119,15 +119,17 @@ jobs:
           
       - name: Update repo.json
         run: |
-          $ver = '${{ github.ref_name }}'
-          $path = './repo.json'
-          $json = Get-Content -Raw $path | ConvertFrom-Json
-          $json[0].AssemblyVersion = $ver
-          $json[0].DownloadLinkInstall = $json.DownloadLinkInstall -replace '[^/]+/latest.zip',"$ver/latest.zip"
-          $json[0].DownloadLinkTesting = $json.DownloadLinkTesting -replace '[^/]+/latest.zip',"$ver/latest.zip"
-          $json[0].DownloadLinkUpdate = $json.DownloadLinkUpdate -replace '[^/]+/latest.zip',"$ver/latest.zip"
-          $content = $json | ConvertTo-Json -AsArray
-          set-content -Path $path -Value $content
+          ver="${{ github.ref_name }}"
+          path="./repo.json"
+          
+          json=$(jq '.' "$path")
+
+          json=$(echo "$json" | jq ".[0].AssemblyVersion = \"$ver\"")
+          json=$(echo "$json" | jq ".[0].DownloadLinkInstall |= sub(\"[^/]+/latest.zip\"; \"$ver/latest.zip\")")
+          json=$(echo "$json" | jq ".[0].DownloadLinkTesting |= sub(\"[^/]+/latest.zip\"; \"$ver/latest.zip\")")
+          json=$(echo "$json" | jq ".[0].DownloadLinkUpdate |= sub(\"[^/]+/latest.zip\"; \"$ver/latest.zip\")")
+          
+          echo "$json" > "$path"
 
       - name: Commit repo.json
         run: |
