@@ -1,7 +1,8 @@
 name: Build Plugin
 
 env:
-  plugin_name: Visibility
+  plugin_name: VisibilityPlus
+  plugin_dir: Visibility
 
 on:
   push:
@@ -44,7 +45,7 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           cache: true
-          cache-dependency-path: ${{ env.plugin_name }}/packages.lock.json
+          cache-dependency-path: ${{ env.plugin_dir }}/packages.lock.json
           dotnet-version: 9.0.x
 
       - name: Determine Dalamud Branch
@@ -80,7 +81,7 @@ jobs:
       - name: Get project path
         id: project_path
         run: |
-          PROJECT_FILE=$(dotnet sln list | grep -i "${{ env.plugin_name }}")
+          PROJECT_FILE=$(dotnet sln list | grep -i "${{ env.plugin_dir }}")
           PROJECT_PATH=$(dirname "$PROJECT_FILE")
           echo "project_path=$PROJECT_PATH" >> $GITHUB_OUTPUT
 
