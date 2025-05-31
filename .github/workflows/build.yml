@@ -1,7 +1,7 @@
 name: Build Plugin
 
 env:
-  plugin_name: Visibility
+  plugin_name: "Visibility Extended"
 
 on:
   push:
