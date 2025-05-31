@@ -1,6 +1,9 @@
 # VisibilityPlugin
 This plugin controls the visibility of players, pets and chocobos.
 
+## How to use
+Add `https://raw.githubusercontent.com/frieren14/VisibilityPlugin/master/repo.json` to custom plugin repositories
+
 ## About
 Visibility lets you hide those pesky players and their chocobos in hunts and major towns to reduce framerate drops and just give better quality of life.
 It also comes with VoidList, which is a better blacklist.
