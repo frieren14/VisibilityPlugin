@@ -2,7 +2,8 @@
 Fork of https://github.com/SheepGoMeh/VisibilityPlugin with the additional option to be used in instanced content.
 
 ## How to use
-Add `https://raw.githubusercontent.com/frieren14/VisibilityPlugin/master/repo.json` to custom plugin repositories
+- Add `https://raw.githubusercontent.com/frieren14/VisibilityPlugin/master/repo.json` to custom plugin repositories
+- Install and enable the VisibilityPlus plugin (and make sure you disable the normal Visibility plugin if you have it installed)
 
 ## About
 Visibility lets you hide those pesky players and their chocobos in hunts and major towns to reduce framerate drops and just give better quality of life.
